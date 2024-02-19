@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容室ホームページ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="shortcut icon" href="image/favicons/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="image/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="image/favicons/android-chrome-192x192.png" sizes="192x192">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc; /* 薄茶色の背景 */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .salon-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .slideshow {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow img {
+            width: 100%;
+            height: auto;
+        }
+
+        .salon-description {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .course-card {
+            flex: 0 0 calc(33.33% - 20px); /* 2分割で均等な幅にする計算 */
+            margin: 0 10px 20px 10px; /* 各コースの間に隙間を均等にあける */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: white;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .course-info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .course-name {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .course-price {
+            font-size: 1.2rem;
+            color: #4CAF50;
+        }
+
+        .reserve-button {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .reserve-button:hover {
+            background-color: #45a049;
+        }
+
+        /* スマホ画面用のスタイル */
+        @media only screen and (max-width: 767px) {
+            .course-card {
+                flex: 0 0 calc(100% - 20px); /* 1列に表示 */
+            }
+        }
+
+        /* 新規追加スタイル */
+        .discount {
+            color: orange;
+        }
+        .calendar {
+            margin-top: 20px;
+        }
+        .form-container {
+            width: 800px;
+            margin: 0 auto;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>美容室ホームページ</h1>
+    </header>
+
+    <main>
+        <div class="salon-container">
+            <!-- サロンのイメージ画像（スライドショー） -->
+            <div class="slideshow">
+                <img src="image/8.jpg" alt="Salon Image 1">
+                <img src="image/5.jpg" alt="Salon Image 2">
+                <img src="image/10.jpg" alt="Salon Image 3">
+                <!-- 追加のイメージがあればここに追加 -->
+            </div>
+
+            <!-- サロンの説明 -->
+            <div class="salon-description">
+                <h2>フェイシャルリンパマッサージ</h2>
+                <p>すべてがオールハンドのエステティックで、お肌に直接働きかけますので、血液とリンパの流れを整える。また、皮膚の新陳代謝を活性化や古い角質を取り除くなど様々な効果があります。当店では、お客様のお肌に直接ふれるオールハンドによる施術とお肌に優しいお米由来の酵素洗顔や軽い感触の植物性オイルなどの化粧品によって、お客様のお肌を内側と外側、両面から健やかな状態に導くエステックです。健康になるには内側からはとても重要である酵素と栄養を供給する血液、不要物や余分な水分を回収するリンパ。 どちらの流れが滞っても、冷え、むくみ、肌荒れなどの不調があられます。特に、リンパは体内浄化するための下管であり、免疫機能 が働く場でもあります。リンパの流れを促す ことは、体調を整え、免疫機能の向上 につながります。ボディだけでなく、顔にも張りめぐらされているリンパ。顔のリンパマッサージをすると 「リンパの流れがよくなる」「血流がよくなる」 「顔筋のコリがほぐれる」「血色の改善」 いいったことから、うれしい美容効果が 期待できます。</p>
+            </div>
+
+            <!-- コース一覧 -->
+            <div class="course-container">
+                <div class="course-card" onclick="location.href='course1.html';">
+                    <img class="course-image" src="image/1.jpg" alt="Course 1">
+                    <div class="course-info">
+                        <div class="course-name">リンパフェイシャル</div>
+                        <div class="course-price">¥5,500</div>
+                        <div class="discount">初回限定 ¥4,500</div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='course2.html';">
+                    <img class="course-image" src="image/2.jpg" alt="Course 2">
+                    <div class="course-info">
+                        <div class="course-name">リンパフェイシャル (たるみ付き/ほうれい線付き/くま付き)</div>
+                        <div class="course-price">¥6,500</div>
+                        <div class="discount">初回限定 ¥5,500</div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='course3.html';">
+                    <img class="course-image" src="image/4.jpg" alt="Course 3">
+                    <div class="course-info">
+                        <div class="course-name">スペシャルコース</div>
+                        <div class="course-price">¥7,500</div>
+                        <div class="discount">初回限定 ¥6,500</div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='course4.html';">
+                    <img class="course-image" src="image/5.jpg" alt="Course 4">
+                    <div class="course-info">
+                        <div class="course-name">フェイシャルリンパ&ヘッドマッサージ</div>
+                        <div class="course-price">¥6,500</div>
+                        <div class="discount">初回限定 ¥5,500</div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='course5.html';">
+                    <img class="course-image" src="image/6.jpg" alt="Course 5">
+                    <div class="course-info">
+                        <div class="course-name">小顔コース</div>
+                        <div class="course-price">¥5,500</div>
+                        <div class="discount">初回限定 ¥3,980</div>
+                    </div>
+                </div>
+
+                <div class="course-card" onclick="location.href='course6.html';">
+                    <img class="course-image" src="image/7.jpg" alt="Course 6">
+                    <div class="course-info">
+                        <div class="course-name">〇〇コース</div>
+                        <div class="course-price">¥2,000</div>
+                        <div class="discount">初回限定 ¥1,000</div>
+                    </div>
+                </div>
+
+                <!-- 他のコースも同様に記述 -->
+            </div>
+
+            <div class="calendar">
+                <h2>予約状況</h2>
+                <iframe
+                src="https://calendar.google.com/calendar/embed?src=cb3a8463294526b1ebc60fb096834a1a8776a33554448fe04985e1d76bdbf288%40group.calendar.google.com&ctz=Asia%2FTokyo&amp;wkst=2&amp;showTitle=0&amp;showNav=1&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;mode=WEEK&amp;via=iframely"
+                style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </div>
+
+            <div class="form-container">
+                <div class="form-title">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZcStCS-5DhtSOZ2-VjxCJVa7fY0v7_pNjzgh6Csz41VSGeQ/viewform">ご予約はこちらから</a>
+                </div>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZcStCS-5DhtSOZ2-VjxCJVa7fY0v7_pNjzgh6Csz41VSGeQ/viewform?embedded=true" width="640" height="1236" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // スライドショーの設定
+            $('.slideshow').slick({
+                arrows: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 2000 // 自動再生の速さ
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
